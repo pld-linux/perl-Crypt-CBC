@@ -10,7 +10,7 @@ License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-Digest-MD5 >= 2.00
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
