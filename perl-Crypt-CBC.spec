@@ -4,13 +4,12 @@
 Summary:	Crypt::CBC perl module
 Summary(pl):	Modu³ perla Crypt::CBC
 Name:		perl-Crypt-CBC
-Version:	1.25
-Release:	7
+Version:	2.03
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-Patch1:		%{name}-Digest-MD5.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Digest-MD5
@@ -28,7 +27,6 @@ mode) dla perla.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 perl Makefile.PL
