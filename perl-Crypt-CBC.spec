@@ -2,9 +2,9 @@
 Summary:	Crypt-CBC perl module
 Summary(pl):	Modu³ perla Crypt-CBC
 Name:		perl-Crypt-CBC
-Version:	1.20
-Release:	3
-Copyright:	GPL
+Version:	1.22
+Release:	1
+License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/Crypt-CBC-%{version}.tar.gz
