@@ -1,11 +1,26 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Crypt
-%define	pnam	CBC
-Summary:	Crypt::CBC perl module
-Summary(pl):	Modu³ perla Crypt::CBC
+%define		pdir	Crypt
+%define		pnam	CBC
+Summary:	libxml-enno Perl module
+Summary(cs):	Modul Crypt::CBC pro Perl
+Summary(da):	Perlmodul Crypt::CBC
+Summary(de):	Crypt::CBC Perl Modul
+Summary(es):	Módulo de Perl Crypt::CBC
+Summary(fr):	Module Perl Crypt::CBC
+Summary(it):	Modulo di Perl Crypt::CBC
+Summary(ja):	Crypt::CBC Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	Crypt::CBC ÆÞ ¸ðÁÙ
+Summary(no):	Perlmodul Crypt::CBC
+Summary(pl):	Modu³ Perla Crypt::CBC
+Summary(pt):	Módulo de Perl Crypt::CBC
+Summary(pt_BR):	Módulo Perl Crypt::CBC
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Crypt::CBC
+Summary(sv):	Crypt::CBC Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Crypt::CBC
+Summary(zh_CN):	Crypt::CBC Perl Ä£¿é
 Name:		perl-Crypt-CBC
 Version:	2.05
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -48,4 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_sitelib}/Crypt/CBC.pm
 %{_mandir}/man3/*
-%{_examplesdir}/%{name}-%{version}
+%dir %{_examplesdir}/%{name}-%{version}
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
