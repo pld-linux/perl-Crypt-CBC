@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	CBC
-Summary:	Crypt::CBC - Encrypt Data with Cipher Block Chaining Mode
-Summary(pl):	Modu³ Crypt::CBC - szyfruj±cy dane w trybie Cipher Block Chaining
+Summary:	Crypt::CBC - encrypt data with Cipher Block Chaining mode
+Summary(pl):	Crypt::CBC - szyfrowanie danych w trybie Cipher Block Chaining
 Name:		perl-Crypt-CBC
 Version:	2.08
 Release:	3
