@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Crypt
 %define	pnam	CBC
-%include	/usr/lib/rpm/macros.perl
 Summary:	Crypt-CBC perl module
 Summary(pl):	Modu³ perla Crypt-CBC
 Name:		perl-Crypt-CBC
 Version:	1.25
-Release:	6
-
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -27,7 +26,7 @@ Crypt-CBC - implementacja CBC (cryptographic cipher block chaining
 mode) dla perla.
 
 %prep
-%setup -q -n Crypt-CBC-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch0 -p1
 %patch1 -p1
 
