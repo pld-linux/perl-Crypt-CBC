@@ -7,8 +7,8 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/Crypt-CBC-%{version}.tar.gz
-Patch:		perl-Crypt-CBC-paths.patch
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/Crypt-CBC-%{version}.tar.gz
+Patch0:		perl-Crypt-CBC-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	perl-Digest-MD5
@@ -17,12 +17,12 @@ Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Crypt-CBC - perl implementation of the CBC (cryptographic cipher block 
+Crypt-CBC - perl implementation of the CBC (cryptographic cipher block
 chaining mode).
 
 %description -l pl
-Crypt-CBC - implementacja CBC (cryptographic cipher block chaining mode)
-dla perla.
+Crypt-CBC - implementacja CBC (cryptographic cipher block chaining
+mode) dla perla.
 
 %prep
 %setup -q -n Crypt-CBC-%{version}
