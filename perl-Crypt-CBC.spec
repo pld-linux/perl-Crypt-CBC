@@ -3,7 +3,7 @@ Summary:	Crypt-CBC perl module
 Summary(pl):	Modu³ perla Crypt-CBC
 Name:		perl-Crypt-CBC
 Version:	1.25
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -45,6 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc .gz eg
+%doc *.gz eg
 %{perl_sitelib}/Crypt/CBC.pm
 %{_mandir}/man3/*
