@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Crypt
 %define	pnam	CBC
-Summary:	Crypt-CBC perl module
-Summary(pl):	Modu³ perla Crypt-CBC
+Summary:	Crypt::CBC perl module
+Summary(pl):	Modu³ perla Crypt::CBC
 Name:		perl-Crypt-CBC
 Version:	1.25
 Release:	7
@@ -18,11 +18,11 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Crypt-CBC - perl implementation of the CBC (cryptographic cipher block
+Crypt::CBC - perl implementation of the CBC (cryptographic cipher block
 chaining mode).
 
 %description -l pl
-Crypt-CBC - implementacja CBC (cryptographic cipher block chaining
+Crypt::CBC - implementacja CBC (cryptographic cipher block chaining
 mode) dla perla.
 
 %prep
