@@ -1,31 +1,38 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	Crypt-CBC perl module
-Summary(pl):	Modu³ perla Crypt-CBC
+%define		pdir	Crypt
+%define		pnam	CBC
+Summary:	Crypt::CBC - Encrypt Data with Cipher Block Chaining Mode
+Summary(pl):	Modu³ Crypt::CBC - szyfruj±cy dane w trybie Cipher Block Chaining
 Name:		perl-Crypt-CBC
-Version:	1.25
-Release:	3
-License:	GPL
+Version:	2.08
+Release:	2
+License:	Artistic
 Group:		Development/Languages/Perl
-Group(de):	Entwicklung/Sprachen/Perl
-Group(pl):	Programowanie/Jêzyki/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/Crypt-CBC-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
-BuildRequires:	perl-Digest-MD5
+BuildRequires:	perl-Digest-MD5 >= 2.00
+BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Crypt-CBC - perl implementation of the CBC (cryptographic cipher block
-chaining mode).
+This module is a Perl-only implementation of the cryptographic cipher
+block chaining mode (CBC). In combination with a block cipher such as
+DES or IDEA, you can encrypt and decrypt messages of arbitrarily long
+length. The encrypted messages are compatible with the encryption
+format used by SSLeay.
 
 %description -l pl
-Crypt-CBC - implementacja CBC (cryptographic cipher block chaining
-mode) dla perla.
+Ten modu³ jest czysto perlow± implementacj± szyfrowania w trybie
+CBC (Cipher Block Chaining). W po³±czeniu z szyfrem blokowym, takim
+jak DES lub IDEA, pozwala szyfrowaæ i deszyfrowaæ wiadomo¶ci o
+dowolnej d³ugo¶ci. Zaszyfrowane wiadomo¶ci s± kompatybilne z formatem
+u¿ywanym przez SSLeay.
 
 %prep
-%setup -q -n Crypt-CBC-%{version}
-%patch -p1
+%setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p1
 
 %build
 perl Makefile.PL
@@ -33,16 +40,19 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README
+install eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc .gz eg
+%doc Changes README
 %{perl_sitelib}/Crypt/CBC.pm
 %{_mandir}/man3/*
+%dir %{_examplesdir}/%{name}-%{version}
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
