@@ -1,27 +1,11 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	CBC
-Summary:	libxml-enno Perl module
-Summary(cs):	Modul Crypt::CBC pro Perl
-Summary(da):	Perlmodul Crypt::CBC
-Summary(de):	Crypt::CBC Perl Modul
-Summary(es):	Módulo de Perl Crypt::CBC
-Summary(fr):	Module Perl Crypt::CBC
-Summary(it):	Modulo di Perl Crypt::CBC
-Summary(ja):	Crypt::CBC Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Crypt::CBC ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Crypt::CBC
-Summary(pl):	Modu³ Perla Crypt::CBC
-Summary(pt):	Módulo de Perl Crypt::CBC
-Summary(pt_BR):	Módulo Perl Crypt::CBC
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Crypt::CBC
-Summary(sv):	Crypt::CBC Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Crypt::CBC
-Summary(zh_CN):	Crypt::CBC Perl Ä£¿é
+Summary:	Crypt::CBC - Encrypt Data with Cipher Block Chaining Mode
 Name:		perl-Crypt-CBC
-Version:	2.05
-Release:	2
-License:	GPL
+Version:	2.08
+Release:	1
+License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
@@ -32,12 +16,14 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Crypt::CBC - perl implementation of the CBC (cryptographic cipher block
-chaining mode).
+This module is a Perl-only implementation of the cryptographic cipher
+block chaining mode (CBC).  In combination with a block cipher such as DES
+or IDEA, you can encrypt and decrypt messages of arbitrarily long length.
+The encrypted messages are compatible with the encryption format used
+by SSLeay.
 
-%description -l pl
-Crypt::CBC - implementacja CBC (cryptographic cipher block chaining
-mode) dla perla.
+# %description -l pl
+# TODO
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
