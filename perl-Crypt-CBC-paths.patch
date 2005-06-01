@@ -1,20 +1,30 @@
---- Crypt-CBC-1.20/eg/des.pl	Tue Jun 16 18:12:58 1998
-+++ Crypt-CBC-1.20/eg.new/des.pl	Sat Oct  2 22:18:28 1999
-@@ -1,6 +1,4 @@
--#!/usr/local/bin/perl
--
--use lib '../blib/lib';
-+#!/usr/bin/perl
+--- Crypt-CBC-2.14/eg/aes.pl.orig	2005-04-22 19:40:33.000000000 +0200
++++ Crypt-CBC-2.14/eg/aes.pl	2005-06-01 21:02:53.117951992 +0200
+@@ -1,7 +1,5 @@
+ #!/usr/bin/perl
  
+-use lib '../blib/lib';
+-
  use Getopt::Std;
- use Crypt::DES;
---- Crypt-CBC-1.20/eg/idea.pl	Tue Jun 16 18:18:10 1998
-+++ Crypt-CBC-1.20/eg.new/idea.pl	Sat Oct  2 22:18:41 1999
-@@ -1,6 +1,4 @@
--#!/usr/local/bin/perl
--
--use lib '../blib/lib';
-+#!/usr/bin/perl
+ use Crypt::CBC;
+ use strict vars;
+--- Crypt-CBC-2.14/eg/des.pl.orig	2005-04-22 19:39:45.000000000 +0200
++++ Crypt-CBC-2.14/eg/des.pl	2005-06-01 21:02:55.919526088 +0200
+@@ -1,7 +1,5 @@
+ #!/usr/bin/perl
  
+-use lib '../blib/lib';
+-
+ use Getopt::Std;
+ use Crypt::CBC;
+ use strict vars;
+--- Crypt-CBC-2.14/eg/idea.pl.orig	2005-04-22 19:39:50.000000000 +0200
++++ Crypt-CBC-2.14/eg/idea.pl	2005-06-01 21:02:58.462139552 +0200
+@@ -1,7 +1,5 @@
+ #!/usr/bin/perl
+ 
+-use lib '../blib/lib';
+-
  use Getopt::Std;
  use Crypt::IDEA;
+ use Crypt::CBC;
