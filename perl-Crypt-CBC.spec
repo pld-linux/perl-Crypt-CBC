@@ -8,17 +8,22 @@
 Summary:	Crypt::CBC - encrypt data with Cipher Block Chaining mode
 Summary(pl):	Crypt::CBC - szyfrowanie danych w trybie Cipher Block Chaining
 Name:		perl-Crypt-CBC
-Version:	2.17
+Version:	2.18
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	521bf0506e1da71506dd0f4afd16d8b4
+# Source0-md5:	439e9f088a1ea37868e6a31c8e9c2692
 Patch0:		%{name}-paths.patch
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/Crypt-CBC/
 BuildRequires:	perl-Digest-MD5 >= 2.00
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-Crypt-Blowfish
+BuildRequires:	perl-Crypt-Blowfish_PP
+BuildRequires:	perl-Crypt-CAST5
+BuildRequires:	perl-Crypt-IDEA
 BuildRequires:	perl-Crypt-Rijndael
 %endif
 BuildArch:	noarch
@@ -32,11 +37,11 @@ length. The encrypted messages are compatible with the encryption
 format used by SSLeay.
 
 %description -l pl
-Ten modu³ jest czysto perlow± implementacj± szyfrowania w trybie
-CBC (Cipher Block Chaining). W po³±czeniu z szyfrem blokowym, takim
-jak DES lub IDEA, pozwala szyfrowaæ i deszyfrowaæ wiadomo¶ci o
-dowolnej d³ugo¶ci. Zaszyfrowane wiadomo¶ci s± kompatybilne z formatem
-u¿ywanym przez SSLeay.
+Ten modu³ jest czysto perlow± implementacj± szyfrowania w trybie CBC
+(Cipher Block Chaining). W po³±czeniu z szyfrem blokowym, takim jak
+DES lub IDEA, pozwala szyfrowaæ i deszyfrowaæ wiadomo¶ci o dowolnej
+d³ugo¶ci. Zaszyfrowane wiadomo¶ci s± kompatybilne z formatem u¿ywanym
+przez SSLeay.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
