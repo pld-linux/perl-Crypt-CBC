@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	CBC
 Summary:	Crypt::CBC - encrypt data with Cipher Block Chaining mode
-Summary(pl):	Crypt::CBC - szyfrowanie danych w trybie Cipher Block Chaining
+Summary(pl.UTF-8):   Crypt::CBC - szyfrowanie danych w trybie Cipher Block Chaining
 Name:		perl-Crypt-CBC
 Version:	2.19
 Release:	1
@@ -36,11 +36,11 @@ DES or IDEA, you can encrypt and decrypt messages of arbitrarily long
 length. The encrypted messages are compatible with the encryption
 format used by SSLeay.
 
-%description -l pl
-Ten modu³ jest czysto perlow± implementacj± szyfrowania w trybie CBC
-(Cipher Block Chaining). W po³±czeniu z szyfrem blokowym, takim jak
-DES lub IDEA, pozwala szyfrowaæ i deszyfrowaæ wiadomo¶ci o dowolnej
-d³ugo¶ci. Zaszyfrowane wiadomo¶ci s± kompatybilne z formatem u¿ywanym
+%description -l pl.UTF-8
+Ten moduÅ‚ jest czysto perlowÄ… implementacjÄ… szyfrowania w trybie CBC
+(Cipher Block Chaining). W poÅ‚Ä…czeniu z szyfrem blokowym, takim jak
+DES lub IDEA, pozwala szyfrowaÄ‡ i deszyfrowaÄ‡ wiadomoÅ›ci o dowolnej
+dÅ‚ugoÅ›ci. Zaszyfrowane wiadomoÅ›ci sÄ… kompatybilne z formatem uÅ¼ywanym
 przez SSLeay.
 
 %prep
