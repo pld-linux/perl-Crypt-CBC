@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	CBC
 Summary:	Crypt::CBC - encrypt data with Cipher Block Chaining mode
-Summary(pl.UTF-8):   Crypt::CBC - szyfrowanie danych w trybie Cipher Block Chaining
+Summary(pl.UTF-8):	Crypt::CBC - szyfrowanie danych w trybie Cipher Block Chaining
 Name:		perl-Crypt-CBC
 Version:	2.19
 Release:	1
