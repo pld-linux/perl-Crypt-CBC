@@ -70,6 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/Crypt/CBC.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Crypt::CBC.3pm*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
