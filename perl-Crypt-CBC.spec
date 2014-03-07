@@ -8,12 +8,12 @@
 Summary:	Crypt::CBC - encrypt data with Cipher Block Chaining mode
 Summary(pl.UTF-8):	Crypt::CBC - szyfrowanie danych w trybie Cipher Block Chaining
 Name:		perl-Crypt-CBC
-Version:	2.32
+Version:	2.33
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Crypt/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b381b81cc89a36b1445b627916c666ce
+# Source0-md5:	3db5117d60df67e3b400fe367e716be0
 Patch0:		%{name}-paths.patch
 URL:		http://search.cpan.org/dist/Crypt-CBC/
 BuildRequires:	perl-Digest-MD5 >= 2.00
